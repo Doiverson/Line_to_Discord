@@ -1,6 +1,6 @@
 # LINE to Discord Worker
 
-Cloudflare Workers + Hono + TypeScript を使って、LINE Messaging API の webhook を Discord webhook に転送する最小構成のサンプルです。
+Cloudflare Workers + Hono + TypeScript を使って、LINE Messaging API の webhook を Discord webhook に転送するサンプルです。テキストメッセージに加えて、画像メッセージも Discord に転送できます。
 
 ## Flow
 
@@ -11,6 +11,13 @@ LINE -> Cloudflare Workers (Hono) -> Discord Webhook
 ## Endpoint
 
 - `POST /webhook/line`
+
+## Supported LINE Events
+
+- text message
+- image message
+
+同じ送信者から連続して届いた画像イベントは、可能な限り1回の Discord 投稿にまとめて添付します。
 
 ## Environment Variables
 
