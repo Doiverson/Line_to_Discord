@@ -76,6 +76,10 @@ Cloudflare Dashboard の `Variables & Secrets` に次の secrets を登録しま
 ```text
 .
 ├── src/index.ts
+├── src/types.ts
+├── src/lib/discord.ts
+├── src/lib/forwarder.ts
+├── src/lib/line.ts
 ├── package.json
 ├── tsconfig.json
 └── wrangler.jsonc
